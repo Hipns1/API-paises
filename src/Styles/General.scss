@@ -1,0 +1,277 @@
+@import "../Styles/Variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+//NAVBAR
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+
+    body.light & {
+        background-color: $elements-light;
+    }
+
+    body.dark & {
+        background-color: $elements-dark;
+    }
+
+    .nav_logo {
+        margin-left: 50px;
+
+        h1 {
+            font-size: 30px;
+
+            body.light & {
+                color: $text-light;
+            }
+
+            body.dark & {
+                color: $text-dark;
+            }
+        }
+    }
+
+    .nav_theme {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 50px;
+
+        button {
+            font-size: 10px;
+            background-color: transparent;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+
+            i {
+                font-size: 20px;
+                margin-right: 10px;
+            }
+
+            body.light & {
+                color: $text-light;
+            }
+
+            body.dark & {
+                color: $text-dark;
+            }
+        }
+    }
+}
+
+
+//ESTILOS DE LOS FILTROS
+.filter_container {
+    display: flex;
+    justify-content: space-between;
+    height: 12vh;
+    align-items: center;
+
+    .filter_search {
+        margin-left: 50px;
+
+        input {
+            box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 20%);
+            height: 50px;
+            width: 300px;
+            padding: 16px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            outline: none;
+
+            body.light & {
+                background-color: $elements-light;
+                color: $text-light;
+            }
+
+            body.dark & {
+                background-color: $elements-dark;
+                color: $text-dark;
+            }
+
+            &::placeholder {
+                body.light & {
+                    color: $text-light;
+                }
+
+                body.dark & {
+                    color: $text-dark;
+                }
+            }
+        }
+    }
+
+    .filter_select {
+        margin-right: 50px;
+
+        select {
+            height: 50px;
+            box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 20%);
+            padding: 0px 16px;
+            border: none;
+            width: 200px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            outline: none;
+
+            body.light & {
+                background-color: $elements-light;
+                color: $text-light;
+            }
+
+            body.dark & {
+                background-color: $elements-dark;
+                color: $text-dark;
+            }
+        }
+    }
+}
+
+
+
+
+//ESTILOS DEL HOME
+.home_container {
+    min-height: 100vh;
+    body.light & {
+        background-color: $bg-light;
+    }
+
+    body.dark & {
+        background-color: $bg-dark;
+    }
+
+    .home_card__container {
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .home_card {
+            width: 300px;
+            min-height: 370px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px;
+            box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 20%);
+            transition: 0.3s all ease-in-out;
+
+            &:hover {
+                transform: scale(1.01);
+            }
+
+            body.light & {
+                background-color: $elements-light;
+            }
+
+            body.dark & {
+                background-color: $elements-dark;
+            }
+
+            .home_card__image {
+                width: 300px;
+                min-height: 200px;
+
+                img {
+                    width: 300px;
+                    height: 200px;
+                    object-fit: cover;
+                }
+            }
+
+            .home_card__text {
+                width: 95%;
+                margin-top: 10px;
+
+                h1 {
+                    font-size: 18px;
+                    margin-bottom: 16px;
+
+                    body.light & {
+                        color: $text-light;
+                    }
+
+                    body.dark & {
+                        color: $text-dark;
+                    }
+                }
+
+                h2 {
+                    font-size: 14px;
+                    margin-top: 5px;
+
+                    body.light & {
+                        color: $text-light;
+                    }
+
+                    body.dark & {
+                        color: $text-dark;
+                    }
+
+                    span {
+                        font-size: 12px;
+                        font-weight: 600;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.home_btn {
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        font-size: 18px;
+        box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 20%);
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 800;
+        cursor: pointer;
+        outline: none;
+        height: 40px;
+        width: 150px;
+        transition: 0.3s all ease-in-out;
+
+        i {
+            margin-right: 10px;
+        }
+
+        body.dark & {
+            color: $text-dark;
+            background-color: $elements-dark;
+        }
+
+        body.light & {
+            color: $text-light;
+            background-color: $elements-light;
+        }
+
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+}
